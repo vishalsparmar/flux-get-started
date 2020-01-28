@@ -11,7 +11,7 @@ spec:
       rules:
         - alert: EndpointDown
           annotations:
-            message: '{{ $value }}% of the {{ $labels.job }} targets are down.'
+            message: '{{ $value }}% of the {{ $labels.job }} targets are down NOW.'
             runbook_url: https://github.com/polarpoint/prometheus-runbooks/blob/master/runbook.md#alert-name-targetdown
             dashboard:  https://dashboard.pohzn.com/
           expr: probe_success == 0
